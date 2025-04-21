@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireBox", "FireBox.csproj", "{358EC91B-2C68-437C-AD28-7EDE5C2D1A5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{358EC91B-2C68-437C-AD28-7EDE5C2D1A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358EC91B-2C68-437C-AD28-7EDE5C2D1A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358EC91B-2C68-437C-AD28-7EDE5C2D1A5E}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{358EC91B-2C68-437C-AD28-7EDE5C2D1A5E}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{358EC91B-2C68-437C-AD28-7EDE5C2D1A5E}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{358EC91B-2C68-437C-AD28-7EDE5C2D1A5E}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

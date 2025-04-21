@@ -1,0 +1,43 @@
+[gd_resource type="VisualShader" load_steps=4 format=3 uid="uid://ce4dkmov4d45v"]
+
+[ext_resource type="Texture2D" uid="uid://dcn1en3caybxd" path="res://source_files/base_cube/Cube_arrows.png" id="1_irhqg"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_eqt5n"]
+expanded_output_ports = [0]
+texture = ExtResource("1_irhqg")
+
+[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_qd25q"]
+constant = Color(0, 0, 0, 1)
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_disabled;
+
+uniform sampler2D tex_frg_2;
+
+
+
+void fragment() {
+// ColorConstant:3
+	vec4 n_out3p0 = vec4(0.000000, 0.000000, 0.000000, 1.000000);
+
+
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_frg_2, UV);
+	float n_out2p4 = n_out2p0.a;
+
+
+// Output:0
+	ALBEDO = vec3(n_out3p0.xyz);
+	ALPHA = n_out2p4;
+	EMISSION = vec3(n_out2p0.xyz);
+
+
+}
+"
+modes/specular = 2
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_eqt5n")
+nodes/fragment/2/position = Vector2(-160, 240)
+nodes/fragment/3/node = SubResource("VisualShaderNodeColorConstant_qd25q")
+nodes/fragment/3/position = Vector2(100, 160)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 5, 3, 0, 0, 0, 2, 4, 0, 1)

@@ -1,0 +1,132 @@
+[gd_scene load_steps=4 format=3 uid="uid://du744mc3bbk4a"]
+
+[ext_resource type="Script" path="res://level_edit/LevelEditTree.cs" id="1_xj06f"]
+[ext_resource type="PackedScene" uid="uid://7hvtm3n2ac2b" path="res://game_play/game_show_cell.tscn" id="2_10hbj"]
+[ext_resource type="PackedScene" uid="uid://cyarygkm8v2y6" path="res://level_edit/level_player_box.tscn" id="2_s670r"]
+
+[node name="BaseLevel" type="Node3D"]
+script = ExtResource("1_xj06f")
+
+[node name="LevelPlayerBox" parent="." instance=ExtResource("2_s670r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="GameShowBox" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="GameShowBox2" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="GameShowBox3" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+isFire = true
+
+[node name="GameShowBox4" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="GameShowBox5" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox6" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox7" parent="." instance=ExtResource("2_10hbj")]
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox8" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox9" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox10" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox11" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox12" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox13" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox14" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox15" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox16" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 2)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox17" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox18" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox19" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox20" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3)
+canEnter = false
+ignitedCounter = 0
+combustibleCounter = 0
+
+[node name="GameShowBox21" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+
+[node name="GameShowBox22" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
+
+[node name="GameShowBox23" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="GameShowBox24" parent="." instance=ExtResource("2_10hbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+boxType = 2

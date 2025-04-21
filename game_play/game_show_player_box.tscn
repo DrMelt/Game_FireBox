@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcna127mc326"]
+
+[ext_resource type="Script" path="res://game_play/GameShowPlayerBox.cs" id="1_ngxlu"]
+[ext_resource type="Script" path="res://game_play/PlayerBoxPointer.cs" id="2_eq86w"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_10s7f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75a4y"]
+resource_local_to_scene = true
+emission_enabled = true
+emission = Color(0.753984, 0.753984, 0.753984, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_grtlu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rcg2g"]
+resource_local_to_scene = true
+albedo_color = Color(0, 0, 0, 1)
+emission_enabled = true
+emission = Color(0.551764, 0.523692, 0.502046, 1)
+
+[node name="GameShowPlayerBox" type="Node3D"]
+script = ExtResource("1_ngxlu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_10s7f")
+surface_material_override/0 = SubResource("StandardMaterial3D_75a4y")
+
+[node name="PlayerBoxPointer" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.119577, 0, 0, 0, 1, 0, 0, 0, -0.119577, 0, 1.55933, 0)
+mesh = SubResource("PlaneMesh_grtlu")
+surface_material_override/0 = SubResource("StandardMaterial3D_rcg2g")
+script = ExtResource("2_eq86w")
+rotateSpeed = 180.0

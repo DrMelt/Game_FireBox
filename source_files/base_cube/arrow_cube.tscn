@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://iy1bodgo8g4x"]
+
+[ext_resource type="ArrayMesh" uid="uid://qpuu27y57l2p" path="res://source_files/base_cube/base_cube.obj" id="1_ffrq3"]
+[ext_resource type="Shader" uid="uid://ce4dkmov4d45v" path="res://source_files/base_cube/arrow_cube.tres" id="2_wgwpo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u0mjn"]
+render_priority = 0
+shader = ExtResource("2_wgwpo")
+
+[node name="ArrowCube" type="Node3D"]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+
+[node name="BaseCube" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.5, 0.5, 0)
+mesh = ExtResource("1_ffrq3")
+surface_material_override/0 = SubResource("ShaderMaterial_u0mjn")

@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://7hvtm3n2ac2b"]
+
+[ext_resource type="Script" path="res://game_play/GameShowCell.cs" id="1_aohr5"]
+[ext_resource type="FontFile" uid="uid://doe462v0rgu8g" path="res://fonts/Noto_Sans_SC/static/NotoSansSC-Bold.ttf" id="2_04l4l"]
+[ext_resource type="PackedScene" uid="uid://bcmpxti5p4d1j" path="res://source_files/base_cube/base_cube.tscn" id="3_w7mg6"]
+[ext_resource type="PackedScene" uid="uid://cmaenbc3q3akt" path="res://source_files/base_cube/fire_source.tscn" id="4_3kryr"]
+
+[node name="GameShowCell" type="Node3D" node_paths=PackedStringArray("endLabel", "targetLabel", "fireLabel", "fireSource", "canEnterLabel")]
+script = ExtResource("1_aohr5")
+endLabel = NodePath("EndLabel")
+targetLabel = NodePath("TargetLabel")
+fireLabel = NodePath("FireLabel")
+fireSource = NodePath("FireSource")
+canEnterLabel = NodePath("CanEnterLabal")
+
+[node name="EndLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2, 0)
+visible = false
+pixel_size = 0.01
+modulate = Color(0.64, 0.379733, 0.2496, 1)
+text = "END"
+font = ExtResource("2_04l4l")
+outline_size = 0
+
+[node name="TargetLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2, 0)
+visible = false
+pixel_size = 0.01
+modulate = Color(0.8, 0.4328, 0.368, 1)
+text = "T"
+font = ExtResource("2_04l4l")
+outline_size = 0
+
+[node name="FireLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2, 0)
+visible = false
+pixel_size = 0.01
+modulate = Color(0.64, 0.477333, 0.2496, 1)
+text = "Fire"
+font = ExtResource("2_04l4l")
+outline_size = 0
+
+[node name="CanEnterLabal" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.467084, 2, 0.299413)
+visible = false
+pixel_size = 0.01
+modulate = Color(0.493545, 0.493546, 0.493546, 1)
+text = "X"
+font = ExtResource("2_04l4l")
+outline_size = 0
+horizontal_alignment = 2
+
+[node name="BaseCube" parent="." instance=ExtResource("3_w7mg6")]
+
+[node name="FireSource" parent="." instance=ExtResource("4_3kryr")]
+visible = false

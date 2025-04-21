@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyarygkm8v2y6"]
+
+[ext_resource type="Script" path="res://level_edit/LevelPlayerBox.cs" id="1_6f2rl"]
+[ext_resource type="PackedScene" uid="uid://bcna127mc326" path="res://game_play/game_show_player_box.tscn" id="2_qpaln"]
+
+[node name="LevelPlayerBox" type="Node3D"]
+script = ExtResource("1_6f2rl")
+
+[node name="GameShowPlayerBox" parent="." instance=ExtResource("2_qpaln")]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmaenbc3q3akt"]
+
+[ext_resource type="ArrayMesh" uid="uid://qpuu27y57l2p" path="res://source_files/base_cube/base_cube.obj" id="1_komvv"]
+[ext_resource type="Texture2D" uid="uid://b7q3rhs3r1cn2" path="res://source_files/base_cube/cube_uv.png" id="2_iqdcy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y81ck"]
+albedo_color = Color(0, 0, 0, 1)
+emission_enabled = true
+emission = Color(0.699026, 0.415737, 0.396521, 1)
+emission_operator = 1
+emission_texture = ExtResource("2_iqdcy")
+
+[node name="FireSource" type="Node3D"]
+
+[node name="BaseCube" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.1, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("1_komvv")
+surface_material_override/0 = SubResource("StandardMaterial3D_y81ck")

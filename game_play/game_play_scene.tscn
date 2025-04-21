@@ -1,0 +1,186 @@
+[gd_scene load_steps=21 format=3 uid="uid://cjrtqqhbxu27a"]
+
+[ext_resource type="Script" path="res://game_play/GameLogic.cs" id="1_gonk2"]
+[ext_resource type="PackedScene" uid="uid://drugn5048ptnt" path="res://level_edit/levels/level_01.tscn" id="2_f5x46"]
+[ext_resource type="Script" path="res://game_play/LevelLoadSetting.cs" id="3_0itf8"]
+[ext_resource type="Script" path="res://game_play/GamePlayCamera.cs" id="3_3pghi"]
+[ext_resource type="Script" path="res://game_play/GameShow.cs" id="3_pa8ih"]
+[ext_resource type="PackedScene" uid="uid://7hvtm3n2ac2b" path="res://game_play/game_show_cell.tscn" id="4_4k4ga"]
+[ext_resource type="FontFile" uid="uid://doe462v0rgu8g" path="res://fonts/Noto_Sans_SC/static/NotoSansSC-Bold.ttf" id="4_7pu02"]
+[ext_resource type="PackedScene" uid="uid://cqr7kywvvrl6i" path="res://level_edit/levels/level_02.tscn" id="4_tje42"]
+[ext_resource type="PackedScene" uid="uid://cardbfgucv3s6" path="res://level_edit/levels/level_03.tscn" id="5_a56fo"]
+[ext_resource type="Script" path="res://game_play/LevelSelect.cs" id="5_yqfpa"]
+[ext_resource type="PackedScene" uid="uid://bcna127mc326" path="res://game_play/game_show_player_box.tscn" id="6_elk5j"]
+[ext_resource type="Script" path="res://game_play/Button_LevelLoad.cs" id="6_ubwep"]
+[ext_resource type="PackedScene" uid="uid://b6kbngjda1qio" path="res://level_edit/levels/level_04.tscn" id="6_yyvaw"]
+[ext_resource type="PackedScene" uid="uid://boxmhius1tajg" path="res://level_edit/levels/level_05.tscn" id="7_r5lh4"]
+[ext_resource type="Script" path="res://game_play/LevelNumber.cs" id="7_xadl6"]
+[ext_resource type="Script" path="res://game_play/LevelStateLabel.cs" id="12_4aove"]
+[ext_resource type="PackedScene" uid="uid://5y2bqb2l755m" path="res://game_play/game_show_box.tscn" id="16_5448t"]
+[ext_resource type="Script" path="res://game_play/StartGame.cs" id="16_l6ur6"]
+
+[sub_resource type="Theme" id="Theme_lyl5y"]
+default_font = ExtResource("4_7pu02")
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_3k6xu"]
+default_font = ExtResource("4_7pu02")
+
+[node name="GamePlayScene" type="Node3D"]
+
+[node name="GameLogic" type="Node" parent="."]
+script = ExtResource("1_gonk2")
+levelScene = ExtResource("2_f5x46")
+
+[node name="LevelLoadSetting_01" type="Node" parent="GameLogic"]
+script = ExtResource("3_0itf8")
+eLevel = 1
+levelScene = ExtResource("2_f5x46")
+
+[node name="LevelLoadSetting_02" type="Node" parent="GameLogic"]
+script = ExtResource("3_0itf8")
+eLevel = 2
+levelScene = ExtResource("4_tje42")
+
+[node name="LevelLoadSetting_03" type="Node" parent="GameLogic"]
+script = ExtResource("3_0itf8")
+eLevel = 3
+levelScene = ExtResource("5_a56fo")
+
+[node name="LevelLoadSetting_04" type="Node" parent="GameLogic"]
+script = ExtResource("3_0itf8")
+eLevel = 4
+levelScene = ExtResource("6_yyvaw")
+
+[node name="LevelLoadSetting_05" type="Node" parent="GameLogic"]
+script = ExtResource("3_0itf8")
+eLevel = 5
+levelScene = ExtResource("7_r5lh4")
+
+[node name="LevelSelect" type="Control" parent="." node_paths=PackedStringArray("gameLogicRef")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_lyl5y")
+script = ExtResource("5_yqfpa")
+gameLogicRef = NodePath("../GameLogic")
+
+[node name="ColorRect" type="ColorRect" parent="LevelSelect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.180005, 0.180005, 0.180005, 1)
+
+[node name="Button_Level01" type="Button" parent="LevelSelect"]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 72.0
+offset_right = 169.0
+offset_bottom = 139.0
+text = "01"
+script = ExtResource("6_ubwep")
+eLevel = 1
+
+[node name="Button_Level02" type="Button" parent="LevelSelect"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 72.0
+offset_right = 315.0
+offset_bottom = 139.0
+text = "02"
+script = ExtResource("6_ubwep")
+eLevel = 2
+
+[node name="Button_Level03" type="Button" parent="LevelSelect"]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 72.0
+offset_right = 457.0
+offset_bottom = 139.0
+text = "03"
+script = ExtResource("6_ubwep")
+eLevel = 3
+
+[node name="Button_Level04" type="Button" parent="LevelSelect"]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 72.0
+offset_right = 594.0
+offset_bottom = 139.0
+text = "04"
+script = ExtResource("6_ubwep")
+eLevel = 4
+
+[node name="Button_Level05" type="Button" parent="LevelSelect"]
+layout_mode = 0
+offset_left = 652.0
+offset_top = 72.0
+offset_right = 732.0
+offset_bottom = 139.0
+text = "05"
+script = ExtResource("6_ubwep")
+eLevel = 5
+
+[node name="Infos" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_3k6xu")
+
+[node name="LevelNumber" type="Label" parent="Infos" node_paths=PackedStringArray("gameLogicRef")]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 116.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 40
+text = "Level"
+script = ExtResource("7_xadl6")
+gameLogicRef = NodePath("../../GameLogic")
+
+[node name="PromptLabel" type="Label" parent="Infos"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 543.0
+offset_right = 176.0
+offset_bottom = 636.0
+theme_override_font_sizes/font_size = 19
+text = "Undo:[Z]
+Restart:[R]
+LevelSelect:[ESC]"
+
+[node name="LevelStateLabel" type="Label" parent="Infos" node_paths=PackedStringArray("gameLogic")]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 7.0
+offset_right = 337.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.3864, 0.69, 0.4623, 1)
+theme_override_font_sizes/font_size = 32
+text = "Completed "
+script = ExtResource("12_4aove")
+gameLogic = NodePath("../../GameLogic")
+
+[node name="GamePlayCamera" type="Camera3D" parent="." node_paths=PackedStringArray("gameLogic")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5, 0)
+projection = 1
+size = 10.0
+script = ExtResource("3_3pghi")
+gameLogic = NodePath("../GameLogic")
+
+[node name="GameShow" type="Node3D" parent="." node_paths=PackedStringArray("gameLogicRef")]
+script = ExtResource("3_pa8ih")
+gameLogicRef = NodePath("../GameLogic")
+gameShowCellPacked = ExtResource("4_4k4ga")
+gameShowPlayerBoxPacked = ExtResource("6_elk5j")
+gameShowBoxPacked = ExtResource("16_5448t")
+
+[node name="StartGame" type="Node" parent="." node_paths=PackedStringArray("gameLogic")]
+script = ExtResource("16_l6ur6")
+gameLogic = NodePath("../GameLogic")
