@@ -146,14 +146,15 @@ gameLogicRef = NodePath("../../GameLogic")
 
 [node name="PromptLabel" type="Label" parent="Infos"]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 543.0
-offset_right = 176.0
-offset_bottom = 636.0
+offset_left = 8.0
+offset_top = 516.0
+offset_right = 181.0
+offset_bottom = 641.0
 theme_override_font_sizes/font_size = 19
 text = "Undo:[Z]
 Restart:[R]
-LevelSelect:[ESC]"
+LevelSelect:[ESC]
+Move: [A][S][D][W]"
 
 [node name="LevelStateLabel" type="Label" parent="Infos" node_paths=PackedStringArray("gameLogic")]
 layout_mode = 0

@@ -36,7 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
 canEnter = false
 
 [node name="GameShowBox16" parent="." instance=ExtResource("3_mb7jd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
 canEnter = false
 
 [node name="GameShowBox26" parent="." instance=ExtResource("3_mb7jd")]
@@ -137,4 +137,36 @@ canEnter = false
 
 [node name="GameShowBox40" parent="." instance=ExtResource("3_mb7jd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
+canEnter = false
+
+[node name="GameShowBox45" parent="." instance=ExtResource("3_mb7jd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="GameShowBox42" parent="." instance=ExtResource("4_j418h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="GameShowBox63" parent="." instance=ExtResource("3_mb7jd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3)
+
+[node name="GameShowBox46" parent="." instance=ExtResource("4_j418h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+
+[node name="GameShowBox7" parent="." instance=ExtResource("3_mb7jd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+canEnter = false
+
+[node name="GameShowBox13" parent="." instance=ExtResource("3_mb7jd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+canEnter = false
+
+[node name="GameShowBox17" parent="." instance=ExtResource("3_mb7jd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+canEnter = false
+
+[node name="GameShowBox19" parent="." instance=ExtResource("3_mb7jd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+canEnter = false
+
+[node name="GameShowBox21" parent="." instance=ExtResource("3_mb7jd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 4)
 canEnter = false
